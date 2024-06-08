@@ -1,6 +1,10 @@
 package HomeWork_7.Model;
 
+
+import java.util.Scanner;
+
 public class DivisionModel extends CalcModel {
+
     public DivisionModel() {
     }
 
@@ -16,6 +20,13 @@ public class DivisionModel extends CalcModel {
 
     @Override
     public void setY(double value) {
-        super.y = value;
+        if (value == 0) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("На ноль делить нельзя. Введите другое число");
+            System.out.print("b: ");
+            value = scanner.nextDouble();
+            super.y = value;
+        } else
+            super.y = value;
     }
 }
