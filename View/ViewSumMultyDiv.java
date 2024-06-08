@@ -21,20 +21,24 @@ public class ViewSumMultyDiv implements View {
     public ModelGen getModelGen() {
         return new SumMultyDivModelGen();
     }
-
+    
+    @Override
     public int getChoice() {
         return this.choice;
     }
-
+    
+    @Override
     public double getValue(String nameValue){
         System.out.printf("%s", nameValue);
         return scanner.nextDouble();
     }
-
+    
+    @Override
     public void printResult(double result){
         System.out.printf("Результат: %f\n", result);
     }
-
+    
+    @Override
     public int choiceOperation(){
         System.out.printf("\nВыберите арифметическую операцию: \n");
         System.out.println("1 - '+' ");
@@ -42,7 +46,8 @@ public class ViewSumMultyDiv implements View {
         System.out.println("3 - '/' ");
         return scanner.nextInt();
     }
-
+    
+    @Override
     public void getOperationName(int choice){
         this.choice = choice;
         if (choice == 1)
