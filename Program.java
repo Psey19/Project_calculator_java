@@ -1,14 +1,12 @@
 package HomeWork_7;
 
 import HomeWork_7.Controller.Controller;
-import HomeWork_7.View.View;
+
+import HomeWork_7.View.ViewSumMultyDiv;
 
 public class Program {
     public static void main(String[] args) {
-        Controller controller = new Controller(new View()); {
-        }
+        Controller controller = new Controller(new ViewSumMultyDiv());
         controller.buttonClick();
-
-
     }
 }
