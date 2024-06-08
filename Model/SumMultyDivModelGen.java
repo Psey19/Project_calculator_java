@@ -2,6 +2,7 @@ package HomeWork_7.Model;
 
 
 public class SumMultyDivModelGen implements ModelGen{
+    @Override
     public Model createModel(int operation){
         if (operation == 1)
             return new SumModel();
