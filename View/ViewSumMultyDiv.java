@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class ViewSumMultyDiv implements View {
     Scanner scanner = new Scanner(System.in);
-    int choice;
+    private int choice;
 
 
     @Override
