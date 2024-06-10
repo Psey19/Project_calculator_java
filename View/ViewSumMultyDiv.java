@@ -1,26 +1,11 @@
 package HomeWork_7.View;
 
-import HomeWork_7.Log.Log;
-import HomeWork_7.Log.LogSumMultyDiv;
-import HomeWork_7.Model.ModelGen;
-import HomeWork_7.Model.SumMultyDivModelGen;
 
 import java.util.Scanner;
 
 public class ViewSumMultyDiv implements View {
     Scanner scanner = new Scanner(System.in);
     private int choice;
-
-
-    @Override
-    public Log startLog() {
-        return new LogSumMultyDiv();
-    }
-
-    @Override
-    public ModelGen getModelGen() {
-        return new SumMultyDivModelGen();
-    }
     
     @Override
     public int getChoice() {
