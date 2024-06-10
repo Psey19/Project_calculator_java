@@ -5,8 +5,9 @@ import HomeWork_7.Model.Model;
 import HomeWork_7.Model.ModelGen;
 
 public interface Controller {
+     //Метод по выбору Логгера, который соответствует арифметическим операциям для View
     Log startLog();
-
+    //Метод по выбору Генератора Модели, которая соответствует арифметическим операциям для View
     ModelGen getModelGen();
 
     void buttonClick();
