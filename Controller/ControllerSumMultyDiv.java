@@ -30,15 +30,12 @@ public class ControllerSumMultyDiv implements Controller{
         //Запускаем Логгер, соответствующий необходимым арифметическим операциям (соответствует операциям для View)
         log = startLog();
         String txt = "";
-        System.out.println("Задайте 1-е вещественное число");
-        double a = view.getValue("a: ");
-        System.out.println("Задайте 2-е вещественное число");
-        double b = view.getValue("b: ");
+        Double a = view.enterFirstNumber();
+        Double b = view.enterSecondNumber();
 
         //Выбираем нужную арифметическую операцию из списка (список соответствует операциям для View)
-        int choice = view.choiceOperation();
         //В консоли отобразится выбранная операция
-        view.getOperationName(choice);
+        view.getOperationName(view.choiceOperation());
         //Выбираем нужный генератор Модели по выбранной арифметической операции (список соответствует операциям для View)
         modelGen = getModelGen();
         model = modelGen.createModel(view.getChoice());
@@ -46,8 +43,8 @@ public class ControllerSumMultyDiv implements Controller{
         //Выводим результат на консоль
         view.printResult(result);
         //Сохраняем данное вычисление в файл (логируем)
-        txt = log.getExpression(a, b, result, view.getChoice());
-        log.writeFile(txt, "lesson_7\\HomeWork_7\\Log\\Saving.txt");
+        txt = log.getExpression(a, b, result, Integer.parseInt(view.getChoice()));
+        log.writeFile(txt, "HomeWork_7\\Log\\Saving.txt");
     }
 
     //Метод для получения результата по выбранной Модели арифметической операции
@@ -58,5 +55,4 @@ public class ControllerSumMultyDiv implements Controller{
         model.setY(y);
         return model.result();
     }
-
 }
