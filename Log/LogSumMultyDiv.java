@@ -16,13 +16,13 @@ public class LogSumMultyDiv implements Log{
     }
 
     @Override
-    public String getExpression(Double x, Double y, Double result, Integer operation) {
+    public String getExpression(Double x, Double y, Double result, String operation) {
         String operationChoise = "";
-        if (operation == 1)
+        if (Integer.parseInt(operation) == 1)
             operationChoise = " + ";
-        else if (operation == 2)
+        if (Integer.parseInt(operation) == 2)
             operationChoise = " * ";
-        else if (operation == 3)
+        if (Integer.parseInt(operation) == 3)
             operationChoise = " / ";
         return String.format("%s%s%s = %s", x, operationChoise, y, result);
     }
