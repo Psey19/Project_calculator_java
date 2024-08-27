@@ -43,7 +43,7 @@ public class ControllerSumMultyDiv implements Controller{
         //Выводим результат на консоль
         view.printResult(result);
         //Сохраняем данное вычисление в файл (логируем)
-        txt = log.getExpression(a, b, result, Integer.parseInt(view.getChoice()));
+        txt = log.getExpression(a, b, result, view.getChoice());
         log.writeFile(txt, "HomeWork_7\\Log\\Saving.txt");
     }
 
@@ -55,4 +55,5 @@ public class ControllerSumMultyDiv implements Controller{
         model.setY(y);
         return model.result();
     }
+
 }
